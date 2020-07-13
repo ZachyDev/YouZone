@@ -1,8 +1,13 @@
 <template>
  <div>
    Videos Count: {{ videos.length}}
-  <ul v-bind:key="video.etag" v-for="video in videos">
-     <VideoListItem></VideoListItem>
+  <ul>
+     <VideoListItem 
+      v-for="video in videos" 
+      :key="video.etag" 
+      :video="video"
+      />
+     
   </ul>
  </div>
 </template>
