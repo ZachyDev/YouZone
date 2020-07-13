@@ -2,7 +2,6 @@
   <div>
     <SearchBar @termChange="onTermChange"></SearchBar>
     <VideoList v-bind:videos="videos"/>
-    {{ videos.length }}
   </div>
 </template>
 
@@ -10,7 +9,7 @@
 import axios from 'axios';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
-const API_KEY = 'AIzaSyB5GqrHRaFYAJf1yUcipmZIWMRc8Rci5wE';
+const API_KEY = 'AIzaSyDAuKrdfyOctgEJW-vimgAvgeuXKeB3D-g';
 export default {
   name: 'App',
   data() {
@@ -33,6 +32,7 @@ export default {
         }
       })
       .then(response => {
+        console.log(response)
        this.videos = response.data.items;
       })
     }
