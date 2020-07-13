@@ -1,7 +1,8 @@
 <template>
  <div>
-  <ul v-bind:key="video.id" v-for="video in videos">
-    {{ video.id}}
+  <ul v-bind:key="video.etag" v-for="video in videos">
+     {{ video.snippet.channelTitle }}
+    {{ video.snippet.description}}
   </ul>
  </div>
 </template>
