@@ -1,6 +1,5 @@
 <template>
  <div>
-   Videos Count: {{ videos.length}}
   <ul>
      <VideoListItem 
       v-for="video in videos" 
