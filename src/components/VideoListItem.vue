@@ -1,7 +1,7 @@
 <template>
   <li class="list-group-item"> 
-       {{ video.snippet.title }}
        <img :src="thumbnailUrl">
+       {{ video.snippet.title }}
  </li>
 </template>
 
