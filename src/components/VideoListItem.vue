@@ -1,5 +1,5 @@
 <template>
-  <li>  {{ video.snippet.channelTitle }}</li>
+  <li>  {{ video.snippet.title }}</li>
 </template>
 
 <script>
