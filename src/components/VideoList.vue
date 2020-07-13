@@ -1,6 +1,6 @@
 <template>
  <div>
-  <ul class="list-item">
+  <ul class="list-item list-unstyled">
      <VideoListItem 
       v-for="video in videos" 
       :key="video.etag" 
