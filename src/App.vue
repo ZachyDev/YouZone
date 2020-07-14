@@ -2,11 +2,8 @@
   <div class="container">
     <!-- search bar -->
     <SearchBar @termChange="onTermChange"></SearchBar>
-
-    <div class="row">
       <VideoDetail :video="selectedVideo" />
       <VideoList :videos="videos" @videoSelect="onVideoSelect" />
-    </div>
   </div>
 </template>
 
