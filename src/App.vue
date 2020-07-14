@@ -4,7 +4,7 @@
     <SearchBar @termChange="onTermChange"></SearchBar>
       <!-- video detail -->
     <VideoDetail 
-    :video="video"
+    :video="selectedVideo"
     />
     <!-- video list -->
     <VideoList 
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       videos: [],
-      video: []
+      selectedVideo: null
     }
   },
   components: {
@@ -36,7 +36,7 @@ export default {
   methods: {
     // onvideo select
     onVideoSelect(video) {
-      this.video = video;
+      this.selectedVideo = video;
       console.log(video)
     },
     // input from the user
