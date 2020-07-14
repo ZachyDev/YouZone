@@ -1,6 +1,6 @@
 <template>
 
-  <li class="list-group-item media"> 
+  <li class="list-group-item" @click="onVideoSelect"> 
       <!-- thumbnail -->
        <img class="mr-3" :src="thumbnailUrl">
        <!-- video title -->
@@ -16,9 +16,16 @@ export default {
     props: ['video'],
     computed: {
         thumbnailUrl() {
-            return this.video.snippet.thumbnails.default.url;
+            return this.video.snippet.thumbnails.default.url
+        }
+    },
+    methods: {
+        onVideoSelect() {
+            console.log(this.video)
+            this.$emit('videoSelect',this.video)
         }
     }
+
 }
 </script>
 
