@@ -25,6 +25,11 @@ export default {
     VideoList
   },
   methods: {
+    // onvideo select
+    onVideoSelect(video) {
+      console.log(video)
+    },
+    // input from the user
     onTermChange: function(searchItem) {
       axios.get('https://www.googleapis.com/youtube/v3/search',{
         params: {
